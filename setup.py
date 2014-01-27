@@ -18,6 +18,10 @@ readme = ''
 with open('README.rst') as f:
     readme = f.read()
 
+history = ''
+with open('HISTORY.rst') as f:
+    history = f.read()
+
 reqs = []
 with open('requirements.txt') as f:
     reqs = f.read().splitlines()
@@ -26,9 +30,9 @@ with open('requirements.txt') as f:
 
 setup(
     name='bash_quote',
-    version='0.1.0',
+    version='1.0.0',
     description='Browse quotes on bash.org from the comfort of your shell.',
-    long_description=readme,
+    long_description=readme + '\n\n' + history,
     author='Ruairi Fahy',
     author_email='ruairifahy91@gmail.com',
     url='https://github.com/ruairif/bash_quote',
