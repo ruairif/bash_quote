@@ -2,12 +2,13 @@
 Usage
 ========
 
-To use bash quote viewer::
+To use bash quote viewer in your shell::
 
-usage: bash_quote.py [-h] [-n [NUM_QUOTES]] [-t [{random,r,top,t,latest,l}]]
+    bashquote [-h] [-n [NUM_QUOTES]] [-t [{random,r,top,t,latest,l}]]
 
 
 To use bash quote viewer in a project::
+
     import bash_quote
 
     # get a list of 10 random quotes with rating > 0
