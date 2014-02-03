@@ -9,6 +9,7 @@ from __future__ import print_function, unicode_literals
 from bs4 import BeautifulSoup
 from sys import argv
 from argparse import ArgumentParser
+from random import sample
 import requests
 
 
@@ -31,11 +32,9 @@ def get_quotes(option='r', num_quotes=1):
     page = BeautifulSoup(requests.get(url).text)
 
     quote_info = page.find_all('p',
-                               attrs={'class': 'quote'},
-                               limit=num_quotes)
+                               attrs={'class': 'quote'})
     quotes = page.find_all('p',
-                           attrs={'class': 'qt'},
-                           limit=num_quotes)
+                           attrs={'class': 'qt'})
 
     return quote_info, quotes
 
@@ -47,7 +46,10 @@ def print_quotes(option='r', num_quotes=1):
     num_quotes - number of quotes that you want printed, integer\
     '''
     quote_info, quotes = get_quotes(option, num_quotes)
-    for info, quote in zip(quote_info, quotes):
+    num_quotes_to_return = min(abs(num_quotes), 50)
+    for quote_num in sample(range(len(quotes)), num_quotes_to_return):
+        info = quote_info[quote_num]
+        quote = quotes[quote_num]
         print('{0}\n{1}'.format(info.get_text()[:-5], quote.get_text()),
               end='\n\n')
 
