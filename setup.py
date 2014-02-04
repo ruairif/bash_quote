@@ -30,7 +30,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='bash_quote',
-    version='1.0.0',
+    version='1.0.1',
     description='Browse quotes on bash.org from the comfort of your shell.',
     long_description=readme + '\n\n' + history,
     author='Ruairi Fahy',

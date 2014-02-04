@@ -20,7 +20,7 @@ class TestBash_quote(unittest.TestCase):
 
     def test_number_of_quotes(self):
         info, quotes = bash_quote.get_quotes()
-        self.assertEqual(1, len(info), len(quotes))
+        self.assertEqual(50, len(info), len(quotes))
         info, quotes = bash_quote.get_quotes(option='r', num_quotes=50)
         self.assertEqual(50, len(info), len(quotes))
         info, quotes = bash_quote.get_quotes(option='l', num_quotes=50)
