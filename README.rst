@@ -14,7 +14,7 @@ bash.org quote viewer
 
 Browse quotes on bash.org from the comfort of your shell.
 
-* Free software: BSD license
+* License: BSD 3-Clause License
 * Documentation: http://bash_quote.rtfd.org.
 
 Installation

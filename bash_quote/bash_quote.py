@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 '''\
-Browse bash.org from the comfort fo your shell.\
+Browse bash.org from the comfort of your shell.\
 '''
 
 
